@@ -1,4 +1,4 @@
-// CPP program to rotate a matrix right by k times 
+
 #include <iostream>  
 #define M 3 
 #define N 3 
