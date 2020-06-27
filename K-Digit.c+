@@ -1,0 +1,30 @@
+#include <bits/stdc++.h> 
+using namespace std; 
+int kthdigit(int a, int b, int k) 
+{ 
+	int p = pow(a, b); 
+
+	int count = 0; 
+	while (p > 0 && count < k) 
+  { 
+		// getting last digit 
+		int rem = p % 10; 
+		count++; 
+
+		// if current number is required digit 
+		if (count == k) 
+			return rem; 
+
+		// remove last digit 
+		p = p / 10; 
+	} 
+
+	return 0; 
+}  
+int main() 
+{ 
+	int a = 5, b = 2; 
+	int k = 1; 
+	cout << kthdigit(a, b, k); 
+	return 0; 
+} 
